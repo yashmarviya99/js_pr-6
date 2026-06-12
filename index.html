@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>
+            <i class="fa-solid fa-list-check"></i>
+            Task Management
+        </h1>
+
+        <p class="subtitle">
+            Manage and organize your tasks easily
+        </p>
+
+        <form id="taskForm">
+
+            <input type="hidden" id="taskId">
+
+            <input type="text" id="title" placeholder="Task Title">
+
+            <input type="date" id="dueDate">
+
+            <textarea id="description" class="full" placeholder="Task Description"></textarea>
+
+            <select id="priority" class="full">
+
+                <option value="">Select Priority</option>
+                <option value="High">High Priority</option>
+                <option value="Medium">Medium Priority</option>
+                <option value="Low">Low Priority</option>
+
+            </select>
+
+            <button type="submit" class="btn">
+                <i class="fa-solid fa-plus"></i>
+                Add Task
+            </button>
+
+        </form>
+
+        <div class="task-count">
+            Total Tasks :
+            <span id="count">0</span>
+        </div>
+
+        <div class="filters">
+
+            <input type="text" id="search" placeholder="🔍 Search Task">
+
+            <select id="filterPriority">
+
+                <option value="All">All Priority</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+
+            </select>
+
+        </div>
+
+        <div id="taskList" class="tasks"></div>
+
+        <div class="footer-note">
+            📋 Organize your tasks efficiently and boost productivity.
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
